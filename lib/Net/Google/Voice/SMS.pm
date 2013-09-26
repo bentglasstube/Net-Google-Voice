@@ -17,7 +17,7 @@ sub new_from_html {
     # TODO make single message object
     push @{ $self->{messages} }, {
       type => (
-        $row->look_down(class => 'gc-message-sms-from')->as_text eq 'Me: '
+        $row->look_down(class => 'gc-message-sms-from')->as_text eq ' Me: '
         ? 'outgoing'
         : 'incoming'
       ),
